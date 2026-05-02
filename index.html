@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1277cf5399.js" crossorigin="anonymous"></script>
+    <title>Hotel</title>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hotel"></i> Hotel
+        </a>
+        <nav class="nav">
+            <a href="Hotel.html"><i class="fa-solid fa-building"></i> Hotel Categories</a>
+            <a href="rooms.html"><i class="fa-solid fa-bed"></i> Rooms</a>
+            <a href="#ab"><i class="fa-solid fa-user"></i> About Developer</a>
+            <a href="#vi-mi"><i class="fa-solid fa-eye"></i> Mission &amp; Vision</a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="main-content">
+            <p class="main-eyebrow">Welcome to</p>
+            <h2><span>Hotel</span><br>Easy · Fast · Awesome · Fantastic</h2>
+            <h3>Your perfect stay is just one click away.<br>Luxury rooms at unbeatable prices.</h3>
+            <div class="main-btns">
+                <a href="rooms.html" class="main-btn">Show Rooms</a>
+                <a href="Hotel.html" class="main-btn main-btn-outline">View Categories</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- VISION & MISSION -->
+    <section class="vision-mission" id="vi-mi">
+        <h2 class="title">Vission &amp; Mission</h2>
+        <div class="cont">
+            <div class="card">
+                <div class="icon"><i class="fa-regular fa-eye"></i></div>
+                <div class="info">
+                    <h3>Vision</h3>
+                    <p>To be the world's most trusted and beloved hotel brand — offering extraordinary experiences that turn every guest into a lifelong friend. We envision a future where every traveler finds their perfect home away from home.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="info">
+                    <h3>Mission</h3>
+                    <p>To deliver exceptional hospitality through personalised service, luxurious comfort, and innovative facilities. We are committed to exceeding guest expectations at every touchpoint, creating memories that last a lifetime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="about" id="ab">
+        <h2 class="title">About Developer</h2>
+        <div class="about-cont">
+            <div class="about-avatar">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="info about-info">
+                <h3> Ahmed Bahaa</h3>
+                <p class="about-role"><i class="fa-solid fa-code"></i> Web Developer · AOU Student</p>
+                <p>A passionate computer science student at the Arab Open University, developing this hotel booking website as part of the TT284 Web Technologies course. Skilled in HTML, CSS, and JavaScript with a focus on building clean, user-friendly web applications.</p>
+                <div class="about-skills">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span><i class="fa-solid fa-palette"></i> UI Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <h2 class="title">Contact Us</h2>
+        <div class="contact-cont">
+            <div class="contact-info-box">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address</strong>
+                        <p>123 Nile St, Cairo, Egypt</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>+20 100 123 4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p>Hotel@hotel.com</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="main-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                <p id="contact-success" style="display:none; color:#3a6cf4; margin-top:10px; font-weight:600;">
+                 Message sent! We will contact you soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Ahmed Bahaa</span></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Hotel.html">Categories</a>
+            <a href="rooms.html">Rooms</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1277cf5399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Hotel Categories</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hotel"></i> Hotel
+        </a>
+        <nav class="nav">
+            <a href="Hotel.html"><i class="fa-solid fa-building"></i> Hotel Categories</a>
+            <a href="rooms.html"><i class="fa-solid fa-bed"></i> Rooms</a>
+            <a href="index.html#ab"><i class="fa-solid fa-user"></i> About Developer</a>
+            <a href="index.html#vi-mi"><i class="fa-solid fa-eye"></i> Mission &amp; Vision</a>
+            <a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-cat">
+        <div class="page-hero-content">
+            <h1>Hotel <span>Categories</span></h1>
+            <p>Find your perfect hotel type — from budget-friendly to ultra-luxury.</p>
+        </div>
+    </section>
+
+    <!-- FILTER BUTTONS -->
+    <section class="cat-section">
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterHotels('all', this)">All</button>
+            <button class="filter-btn" onclick="filterHotels('luxury', this)">👑 Luxury</button>
+            <button class="filter-btn" onclick="filterHotels('business', this)">💼 Business</button>
+            <button class="filter-btn" onclick="filterHotels('family', this)">👨‍👩‍👧 Family</button>
+            <button class="filter-btn" onclick="filterHotels('budget', this)">💰 Budget</button>
+            <button class="filter-btn" onclick="filterHotels('beach', this)">🏖️ Beach</button>
+        </div>
+
+        <div class="hotels-grid" id="hotels-grid">
+
+            <!-- LUXURY -->
+            <div class="hotel-cat-card" data-cat="luxury">
+                <div class="hc-img hc-luxury"><i class="fa-solid fa-crown"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#fff8e6;color:#8b6914;">👑 Luxury</span>
+                    <h3>The Grand Monarch</h3>
+                    <p class="hc-stars">⭐⭐⭐⭐⭐ | Cairo, Egypt</p>
+                    <p class="hc-desc">Indulge in 5-star opulence. Marble lobbies, Michelin-starred dining, rooftop infinity pool, and round-the-clock butler service.</p>
+                    </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$450</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUSINESS -->
+            <div class="hotel-cat-card" data-cat="business">
+                <div class="hc-img hc-business"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#e8f0fe;color:#1a3a6b;">💼 Business</span>
+                    <h3>Executive Suites Cairo</h3>
+                    <p class="hc-stars">⭐⭐⭐⭐ | Downtown Cairo</p>
+                    <p class="hc-desc">Purpose-built for the modern professional. Smart workspaces, high-speed fiber internet, express laundry, and a 24/7 business center.</p>
+                </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$180</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAMILY -->
+            <div class="hotel-cat-card" data-cat="family">
+                <div class="hc-img hc-family"><i class="fa-solid fa-people-roof"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#e8f5e9;color:#2e7d32;">👨‍👩‍👧 Family</span>
+                    <h3>Sunshine Family Resort</h3>
+                    <p class="hc-stars">⭐⭐⭐⭐ | Hurghada, Egypt</p>
+                    <p class="hc-desc">The perfect family getaway — kids' club, waterslides, supervised activities, and interconnecting family suites for all ages.</p>
+                    </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$220</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUDGET -->
+            <div class="hotel-cat-card" data-cat="budget">
+                <div class="hc-img hc-budget"><i class="fa-solid fa-coins"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#f3f3f3;color:#4a4a4a;">💰 Budget</span>
+                    <h3>Smart Inn Cairo</h3>
+                    <p class="hc-stars">⭐⭐⭐ | Giza, Egypt</p>
+                    <p class="hc-desc">Maximum value without compromise. Clean comfortable rooms, complimentary breakfast, and a prime location near the Pyramids.</p>
+                   </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$55</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEACH -->
+            <div class="hotel-cat-card" data-cat="beach">
+                <div class="hc-img hc-beach"><i class="fa-solid fa-umbrella-beach"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#e0f7fa;color:#006064;">🏖️ Beach Resort</span>
+                    <h3>Azure Blue Resort</h3>
+                    <p class="hc-stars">⭐⭐⭐⭐⭐ | Sharm El Sheikh</p>
+                    <p class="hc-desc">World-class Red Sea beachfront resort. Private beach access, coral reef snorkeling, overwater bungalows, and sunset dining above the waves.</p>
+                    </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$320</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LUXURY 2 -->
+            <div class="hotel-cat-card" data-cat="luxury">
+                <div class="hc-img hc-luxury2"><i class="fa-solid fa-gem"></i></div>
+                <div class="hc-body">
+                    <span class="hc-badge" style="background:#fff8e6;color:#8b6914;">👑 Luxury</span>
+                    <h3>Rosewood Palace</h3>
+                    <p class="hc-stars">⭐⭐⭐⭐⭐ | Alexandria, Egypt</p>
+                    <p class="hc-desc">A Mediterranean-facing palace blending Pharaonic heritage with contemporary luxury. Renowned for its rose garden terrace and curated art collection.</p>
+                   </br></br></br></br>
+                    <div class="hc-footer">
+                        <span class="hc-price">From <strong>$380</strong>/night</span>
+                        <a href="rooms.html" class="room-btn">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Ahmed Bahaa</span></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Hotel.html">Categories</a>
+            <a href="rooms.html">Rooms</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

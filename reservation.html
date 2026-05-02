@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1277cf5399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Reservation</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-hotel"></i> Hotel
+        </a>
+        <nav class="nav">
+            <a href="Hotel.html"><i class="fa-solid fa-building"></i> Hotel Categories</a>
+            <a href="rooms.html"><i class="fa-solid fa-bed"></i> Rooms</a>
+            <a href="index.html#ab"><i class="fa-solid fa-user"></i> About Developer</a>
+            <a href="index.html#vi-mi"><i class="fa-solid fa-eye"></i> Mission &amp; Vision</a>
+            <a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <section class="res-hero">
+        <div class="page-hero-content">
+            <h1>Make a <span>Reservation</span></h1>
+            <p>Select rooms, pick your dates, and confirm your stay.</p>
+        </div>
+    </section>
+
+    <section class="res-section">
+        <div class="res-layout">
+
+            <!-- LEFT: ROOM SELECTOR -->
+            <div class="res-left">
+                <h2 class="res-heading"><i class="fa-solid fa-bed"></i> Select Rooms</h2>
+                <p class="res-sub">Add or remove rooms using + / − buttons.</p>
+
+                <div class="room-select-list">
+                    <div class="res-cat-label">👑 Luxury</div>
+                    <div class="room-row" data-price="650">
+                        <div class="room-row-info">
+                            <strong>Royal Penthouse</strong>
+                            <span>King Bed · Jacuzzi · Panoramic View</span>
+                        </div>
+                        <div class="room-row-right">
+                            <span class="rr-price">$650/night</span>
+                            <div class="qty-ctrl">
+                                <button onclick="changeQty(this,-1)">−</button>
+                                <span class="qty">0</span>
+                                <button onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-row" data-price="250">
+                        <div class="room-row-info">
+                            <strong>Deluxe Suite</strong>
+                            <span>King Bed · City View · Work Desk</span>
+                        </div>
+                        <div class="room-row-right">
+                            <span class="rr-price">$250/night</span>
+                            <div class="qty-ctrl">
+                                <button onclick="changeQty(this,-1)">−</button>
+                                <span class="qty">0</span>
+                                <button onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="res-cat-label">👨‍👩‍👧 Family</div>
+                    <div class="room-row" data-price="350">
+                        <div class="room-row-info">
+                            <strong>Family Suite</strong>
+                            <span>2 Bedrooms · Pool View · Kitchenette</span>
+                        </div>
+                        <div class="room-row-right">
+                            <span class="rr-price">$350/night</span>
+                            <div class="qty-ctrl">
+                                <button onclick="changeQty(this,-1)">−</button>
+                                <span class="qty">0</span>
+                                <button onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="res-cat-label">💰 Budget</div>
+                    <div class="room-row" data-price="120">
+                        <div class="room-row-info">
+                            <strong>Standard Room</strong>
+                            <span>Queen Bed · Garden View · Free WiFi</span>
+                        </div>
+                        <div class="room-row-right">
+                            <span class="rr-price">$120/night</span>
+                            <div class="qty-ctrl">
+                                <button onclick="changeQty(this,-1)">−</button>
+                                <span class="qty">0</span>
+                                <button onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: SUMMARY + FORM -->
+            <div class="res-right">
+
+                <!-- PRICE SUMMARY -->
+                <div class="price-summary-card">
+                    <h3><i class="fa-solid fa-receipt"></i> Booking Summary</h3>
+                    <div id="summary-lines">
+                        <p class="empty-summary">No rooms selected yet.</p>
+                    </div>
+                    <div class="date-row">
+                        <div>
+                            <label>Check-in</label>
+                            <input type="date" id="res-checkin" onchange="updateTotal()">
+                        </div>
+                        <div>
+                            <label>Check-out</label>
+                            <input type="date" id="res-checkout" onchange="updateTotal()">
+                        </div>
+                    </div>
+                    <p id="nights-info" class="nights-info" style="display:none;"></p>
+                    <div class="total-row">
+                        <span>Total Price</span>
+                        <strong id="grand-total">$0</strong>
+                    </div>
+                </div>
+
+                <!-- GUEST FORM -->
+                <div class="guest-card">
+                    <h3><i class="fa-solid fa-user-pen"></i> Guest Details</h3>
+                    <div class="form-grp">
+                        <label>Full Name</label>
+                        <input type="text" id="g-name" placeholder="e.g. Ahmed Mohamed">
+                    </div>
+                    <div class="form-grp">
+                        <label>Email Address</label>
+                        <input type="email" id="g-email" placeholder="ahmed@email.com">
+                    </div>
+                    <div class="form-grp">
+                        <label>Phone Number</label>
+                        <input type="tel" id="g-phone" placeholder="+20 100 000 0000">
+                    </div>
+                    <div class="form-grp">
+                        <label>Special Requests</label>
+                        <textarea id="g-requests" rows="3" placeholder="Early check-in, high floor, extra pillows..."></textarea>
+                    </div>
+                    <button class="main-btn res-confirm-btn" onclick="confirmRes()">
+                        <i class="fa-solid fa-check-circle"></i> Confirm Reservation
+                    </button>
+                    <div id="res-confirm-msg" style="display:none;"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Ahmed Bahaa</span></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Hotel.html">Categories</a>
+            <a href="rooms.html">Rooms</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
