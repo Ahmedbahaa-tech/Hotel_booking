@@ -80,11 +80,5 @@ Ahmed Bahaa
 
 ## 🔗 Links
 
-* LinkedIn: *(Add your LinkedIn here)*
-* GitHub: *(Add your GitHub here)*
+* LinkedIn: www.linkedin.com/in/ahmed-bahaa-682022225
 
----
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
