@@ -57,11 +57,6 @@ cd hotel-booking
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots of your project here)*
-
----
 
 ## 📌 Future Improvements
 
